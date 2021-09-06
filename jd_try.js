@@ -1,10 +1,8 @@
 /*
-#由ZCY01二次修改：脚本默认不运行
-#由 X1a0He 修复：依然保持脚本默认不运行
 #如需运行请自行添加环境变量：JD_TRY，值填 true 即可运行
 #TG通知频道：https://t.me/jd_zero205_tz
 
-10 10 * * * jd_try.js
+10 8,12 * * * jd_try.js
 
 #update 2021/09/05
 #京东试用：脚本更新地址 https://github.com/zero205/JD_tencent_scf/raw/main/jd_try.js
@@ -64,7 +62,7 @@ let args_xh = {
      * 例如是18件，将会进行第三次获取，直到过滤完毕后为20件才会停止，不建议设置太大
      * 可设置环境变量：JD_TRY_MAXLENGTH
      * */
-    maxLength: process.env.JD_TRY_MAXLENGTH || 50
+    maxLength: process.env.JD_TRY_MAXLENGTH || 30
 }
 
 !(async() => {
