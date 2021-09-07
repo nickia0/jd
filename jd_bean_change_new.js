@@ -1,5 +1,5 @@
 /*
-40 11,22 * * * jd_bean_change_new.js
+45 18 * * * jd_bean_change_new.js
 #https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_bean_change_new.js
 */
 
