@@ -3,7 +3,7 @@
 */
 // https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_bean_change_new.js
 //更新by ccwav,20210821
-const $ = new Env('京东所有资产变动通知');
+const $ = new Env('京东今日所有资产变动通知');
 const notify = $.isNode() ? require('./sendNotify') : '';
 const JXUserAgent =  $.isNode() ? (process.env.JX_USER_AGENT ? process.env.JX_USER_AGENT : ``):``;
 //Node.js用户请在jdCookie.js处填写京东ck;
