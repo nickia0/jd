@@ -9,7 +9,7 @@ const JXUserAgent =  $.isNode() ? (process.env.JX_USER_AGENT ? process.env.JX_US
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 //通知分为单账号 默认 false,环境变量 BEAN_CHANGE_NOTIFYTIP
-const notifyTip = $.isNode() ? process.env.BEAN_CHANGE_NOTIFYTIP : true;
+const notifyTip = $.isNode() ? process.env.BEAN_CHANGE_NOTIFYTIP : false;
 let allMessage = '';
 let ReturnMessage = '';
 //IOS等用户直接用NobyDa的jd cookie
