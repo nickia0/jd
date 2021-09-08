@@ -1,8 +1,8 @@
 /*
+#京东到家果园任务
 10 6 * * * jd_dj_fruit.js
 
 */
-
 let isNotify = true;//是否通知,仅限nodejs
 let ckPath = './jdCookie.js';//ck路径,环境变量:JDDJ_CKPATH
 
