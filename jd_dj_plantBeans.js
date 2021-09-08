@@ -1,6 +1,6 @@
 /*
 #京东到家鲜豆庄园
-30 3,8,11,17 * * * jd_dj_plantBeans.js
+40 3,8,11,17 * * * jd_dj_plantBeans.js
 
 #https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_plantBeans.js
 */
