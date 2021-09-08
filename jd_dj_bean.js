@@ -1,6 +1,6 @@
 /*
 #京东到家鲜豆任务
-10 1,3,5 * * * jd_dj_bean.js
+50 3,8,11,17 * * * jd_dj_bean.js
 
 #https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_bean.js
 */
