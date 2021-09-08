@@ -1,5 +1,6 @@
 /*
-10 1,3,5 * * * jd_dj_bean.js,tag=京东到家鲜豆任务
+#京东到家鲜豆任务
+10 1,3,5 * * * jd_dj_bean.js
 
 #https://raw.githubusercontent.com/passerby-b/JDDJ/main/jddj_bean.js
 */
