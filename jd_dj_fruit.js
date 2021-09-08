@@ -1,6 +1,6 @@
 /*
 #京东到家果园任务
-10 6 * * * jd_dj_fruit.js
+30 6 * * * jd_dj_fruit.js
 
 */
 let isNotify = true;//是否通知,仅限nodejs
