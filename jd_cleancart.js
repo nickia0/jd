@@ -1,6 +1,6 @@
 /*
 #清空购物车
-20 12,22 * * * jd_cleancart.js
+20 6-18/6 * * * jd_cleancart.js
 
 #https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_cleancart.js
  */
