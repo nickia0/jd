@@ -1,6 +1,6 @@
 /**
 https://lzdz1-isv.isvjcloud.com/dingzhi/vivo/iqoojieyapa/activity/3422323?activityId=dz2109100009716201
-6 6,23 * * * jd_vivo.js
+6 6,23 21-30 9 * jd_vivo.js
 **/
 const $ = new Env("vivo狂制噪吧");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
