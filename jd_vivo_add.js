@@ -1,14 +1,5 @@
 /**
-    * @description      : 
-    * @author           : 
-    * @group            : 
-    * @created          : 19/07/2021 - 15:37:10
-    * 
-    * MODIFICATION LOG
-    * - Version         : 1.0.0
-    * - Date            : 19/07/2021
-    * - Author          : 
-    * - Modification    : 
+14 14 * * *  jd_vivo_add.js
 **/
 const $ = new Env("Vivo投票");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
