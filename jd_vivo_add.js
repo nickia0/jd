@@ -1,5 +1,5 @@
 /**
-14 14 * * *  jd_vivo_add.js
+14 13 * * *  jd_vivo_add.js
 **/
 const $ = new Env("Vivo投票");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
