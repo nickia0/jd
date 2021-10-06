@@ -1,5 +1,5 @@
 /*
-由Shy_yhS更新店铺数据，每天超过20间店铺会火爆
+由Shy_yhS更新店铺数据，每天超过20间店铺会火爆# https://raw.githubusercontent.com/shyyhs19625/Shy_yhS/main/jd_dpqd_diy.js
 更新日期:2021-10-04 21:58
 30 0,23 * * * jd_qpqd_diy.js
 */
