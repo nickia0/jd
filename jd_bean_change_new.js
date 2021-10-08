@@ -1,5 +1,5 @@
 /*
-30 18 * * * jd_bean_change_new.js
+50 18 * * * jd_bean_change_new.js
 # https://github.com/ccwav/QLScript2/blob/main/jd_bean_change.js
 */
 
