@@ -1,19 +1,7 @@
 /*
 更新地址：https://github.com/Tsukasa007/my_script
-============Quantumultx===============
-[task_local]
-#玩一玩成就
-0 8 * * * jd_wyw.js, tag=玩一玩成就, img-url=https://raw.githubusercontent.com/tsukasa007/icon/master/jd_wyw.png, enabled=true
 
-================Loon==============
-[Script]
-cron "0 8 * * *" script-path=jd_wyw.js,tag=玩一玩成就
-
-===============Surge=================
-玩一玩成就 = type=cron,cronexp="0 8 * * *",wake-system=1,timeout=3600,script-path=jd_wyw.js
-
-============小火箭=========
-玩一玩成就 = type=cron,script-path=jd_wyw.js, cronexpr="0 8 * * *", timeout=3600, enable=true
+12 8,15 * * * jd_wyw.js
 */
 const $ = new Env('玩一玩成就');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
