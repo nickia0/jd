@@ -1,6 +1,6 @@
 /*
 一加 9RT新品发布
-10 10,22 * * * rush_lzdz1_yijia.js
+10 10,22 * * * jd_rush_lzdz1_yijia.js
 https://lzdz1-isv.isvjcloud.com/dingzhi/yijia/collectvalue/activity/5063373?activityId=dz2109100000194701&shareUuid=ee5d41f11f454b8db66c24c2fd09f2f7
 */
 const $ = new Env("一加 9RT新品发布");
