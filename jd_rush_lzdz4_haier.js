@@ -1,6 +1,6 @@
 /*
 瓜分海尔万元小家电
-5 9,18 * * * rush_lzdz4_haier.js
+5 9,18 * * * jd_rush_lzdz4_haier.js
 https://lzdz4-isv.isvjcloud.com/dingzhi/haier/active/activity/5774784?activityId=dz2109100000178201&shareUuid=14d5ddfd3b6241dd934bec29cf39ebd3
 */
 const $ = new Env("瓜分海尔万元小家电");
