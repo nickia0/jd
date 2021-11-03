@@ -1,6 +1,6 @@
 /*
 #手机竞猜
-0 0 * * * jd_sjjc.js
+0 0,17 * * * jd_sjjc.js
 #script-path= https://raw.githubusercontent.com/Ariszy/Private-Script/master/JD/zy_sjjc.js
 */
 const Ariszy = '手机竞猜'
