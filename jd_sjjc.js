@@ -9,6 +9,7 @@ const notify = $.isNode() ?require('./sendNotify') : '';
 cookiesArr = []
 CodeArr = []
 cookie = ''
+var quizId = "",shareId = "",jump = ""
 var brandlistArr = [],shareidArr = []
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
@@ -60,8 +61,10 @@ if ($.isNode()) {
                 continue
             }
       await getlist()
-      await quiz()
       await Zy()
+      await control()
+      await ZY()
+      await lottery(quizId)
   }
 for(let i = 0; i < cookiesArr.length; i++){
       cookie = cookiesArr[i];
@@ -70,9 +73,8 @@ for(let i = 0; i < cookiesArr.length; i++){
       $.isLogin = true;
       $.index = i + 1;
        console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}助力模块*********\n`);
-      await control()
       await zy()
-      // await formatcode()
+      await formatcode()
 }
 
 })()
@@ -100,9 +102,9 @@ function GetRequest(uri) {
 }
 
 
-async function quiz(){
- const body = `appid=apple-jd-aggregate&functionId=brandquiz_prod&body={"quizId":4,"quizStr":"${distinct(brandlistArr)}","predictId":null,"apiMapping":"/api/index/quiz"}&t=${new Date().getTime()}&loginType=2`
- const MyRequest = PostRequest(`index/quiz`,body)
+async function quiz(quizId){
+ const body = `appid=apple-jd-aggregate&functionId=brandquiz_prod&body={"quizId":${quizId},"quizStr":"${distinct(brandlistArr)}","predictId":null,"apiMapping":"/api/index/quiz"}&t=${new Date().getTime()}&loginType=2`
+ const MyRequest = PostRequests(body)
  return new Promise((resolve) => {
    $.post(MyRequest,async(error, response, data) =>{
     try{
@@ -124,10 +126,10 @@ async function quiz(){
   }
 async function control(){
       await first()
-      await getshareid()
+      await getshareid(quizId)
 }
 async function first(){
-const body = `appid=apple-jd-aggregate&functionId=brandquiz_prod&body=%7B%22quizId%22:4,%22apiMapping%22:%22/api/support/getSupport%22%7D&t=${new Date().getTime()}&loginType=2`
+const body = `appid=apple-jd-aggregate&functionId=brandquiz_prod&body=%7B%22quizId%22:3,%22apiMapping%22:%22/api/support/getSupport%22%7D&t=${new Date().getTime()}&loginType=2`
  const MyRequest = PostRequests(body)
  return new Promise((resolve) => {
     $.post(MyRequest,async(error, response, data) =>{
@@ -143,7 +145,7 @@ const body = `appid=apple-jd-aggregate&functionId=brandquiz_prod&body=%7B%22quiz
    })
   }
 async function getshareid(){
- const body = `appid=apple-jd-aggregate&functionId=brandquiz_prod&body={"quizId":4,"apiMapping":"/api/support/getSupport"}&t=${new Date().getTime()}&loginType=2`
+ const body = `appid=apple-jd-aggregate&functionId=brandquiz_prod&body={"quizId":${quizId},"apiMapping":"/api/support/getSupport"}&t=${new Date().getTime()}&loginType=2`
  const MyRequest = PostRequests(body)
  return new Promise((resolve) => {
     $.post(MyRequest,async(error, response, data) =>{
@@ -151,7 +153,7 @@ async function getshareid(){
         const result = JSON.parse(data)
         if(logs)$.log(data)
         if(result && result.code && result.code == 200){
-         
+        shareId = result.data.shareId
 $.log("互助码："+result.data.shareId+"\n")
 shareidArr.push(result.data.shareId)
 await $.wait(8000)
@@ -159,6 +161,34 @@ await $.wait(8000)
         }else{
            $.log("😫"+result.msg+"\n")
         }
+        }catch(e) {
+          $.logErr(e, response);
+      } finally {
+        resolve();
+      } 
+    })
+   })
+  }
+async function ZY(){
+ for(let i = 0; i < 10; i ++){
+   await getSupportReward(i,shareId)
+   if(jump == 1)
+      break;
+ }
+}
+async function getSupportReward(turn,shareid){
+ const body = `appid=apple-jd-aggregate&functionId=brandquiz_prod&body={"supporterIndex":${turn},"shareId":"${shareid}","apiMapping":"/api/support/getSupportReward"}&t=${new Date().getTime()}&loginType=2`
+ const MyRequest = PostRequests(body)
+ return new Promise((resolve) => {
+    $.post(MyRequest,async(error, response, data) =>{
+    try{
+        const result = JSON.parse(data)
+        if(logs)$.log(data)
+        if(result && result.code && result.code == 200){
+         console.log("获得豆豆"+result.data+"个\n")
+       }else{
+         jump = 1;
+         }
         }catch(e) {
           $.logErr(e, response);
       } finally {
@@ -195,6 +225,28 @@ async function dosupport(shareid){
     })
    })
   }
+async function lottery(quizId){
+ const body = `appid=apple-jd-aggregate&appid=apple-jd-aggregate&functionId=brandquiz_prod&body={"quizId":${quizId},"apiMapping":"/api/index/lottery"}&t=${new Date().getTime()}&loginType=2`
+ const MyRequest = PostRequests(body)
+ return new Promise((resolve) => {
+    $.post(MyRequest,async(error, response, data) =>{
+    try{
+        const result = JSON.parse(data)
+        if(logs)$.log(data)
+        if(result.code == 200){
+         console.log("抽奖结果"+result.data.prizeName)
+       
+        }else{
+         console.log(result.msg)
+        }
+        }catch(e) {
+          $.logErr(e, response);
+      } finally {
+        resolve();
+      } 
+    })
+   })
+  }
 async function zy(){
 for(let i = 0; i < distinct(shareidArr).length;i++){
 console.log("开始内部助力"+shareidArr[i]+"\n")
@@ -203,32 +255,26 @@ await $.wait(8000)
 }
 }
 async function getlist(){
-	 // const body = `appid=apple-jd-aggregate&functionId=brandquiz_prod&body={"apiMapping":"/api/index/indexInfo"}&t=${new Date().getTime()}&loginType=2`
-
- const body = `appid=apple-jd-aggregate&functionId=brandquiz_prod&body={"quizId":4,"apiMapping":"/api/index/brandRank"}&t=${new Date().getTime()}&loginType=2`
+ const body = `appid=apple-jd-aggregate&functionId=brandquiz_prod&body={"apiMapping":"/api/index/indexInfo"}&t=${new Date().getTime()}&loginType=2`
  const MyRequest = PostRequests(body)
  return new Promise((resolve) => {
     $.post(MyRequest,async(error, response, data) =>{
     try{
         const result = JSON.parse(data)
         if(logs)$.log(data)
-			// await $.wait(8000)
         if(result && result.code && result.code == 200){
-       
-       // console.log(result.data"\n")
+       //shareId = result.data.shareId
+       quizId = result.data.quizId
+       console.log(result.data.listName+"\n")
       for(let i = 0; i < 5; i++){
-       let numberid = result.data[i].id
-	   // console.log(numberid)
-	   // await $.wait(8000)
+       let numberid = result.data.brandWall[i].id.match(/\w+/)
        brandlistArr.push(numberid)
-	   // console.log(brandlistArr)
-	   // await $.wait(2000)
       }
 $.log("榜单获取成功"+distinct(brandlistArr))
 await $.wait(8000)
+await quiz(quizId)
         }else{
            $.log("😫"+result.msg+"\n")
-		   return;
         }
         }catch(e) {
           $.logErr(e, response);
@@ -274,7 +320,7 @@ async function readShareCodes(){
   } 
 
 async function formatcode(){
-// await readShareCodes();
+await readShareCodes();
 var newsharecodes = [];
 var arr = CodeArr
 var count = arr.length;
