@@ -1,5 +1,5 @@
 /**
-
+0 13 * * * jd_rush_vivo.js
 **/
 const $ = new Env("Phone");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
