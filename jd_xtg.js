@@ -1,6 +1,6 @@
 /**
  星推官
-22 3,4 * * * jd_xtg.js
+22 3,4,10 * * * jd_xtg.js
  https://raw.githubusercontent.com/star261/jd/main/scripts/jd_xtg.js
  * */
 const $ = new Env('星推官');
