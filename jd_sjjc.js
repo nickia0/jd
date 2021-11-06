@@ -1,7 +1,7 @@
 /*
 tgchannel：https://t.me/Ariszy8028
 github：https://github.com/Ariszy/Private-Script
-0 0,1 * * * jd_sjjc.js
+0 0,1,12 * * * jd_sjjc.js
 https://raw.githubusercontent.com/Ariszy/Private-Script/master/JD/zy_sjjc.js
 */
 const Ariszy = '手机竞猜'
