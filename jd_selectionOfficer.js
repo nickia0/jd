@@ -1,10 +1,9 @@
-
 /*
-* 活动：APP-美妆馆-右侧浮窗
-23 9,10 * * * jd_selectionOfficer.js
-https://raw.githubusercontent.com/star261/jd/main/scripts/jd_selectionOfficer.js
-* 说明：脚本内互助，无开卡，有加购
-* */
+选品官
+更新时间：2021-10-30  https://raw.githubusercontent.com/star261/jd/main/scripts/jd_selectionOfficer.js
+活动入口：APP-美妆馆-右侧浮窗
+12 9,10 * * * jd_selectionOfficer.js
+ */
 const $ = new Env('选品官');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
