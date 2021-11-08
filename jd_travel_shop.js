@@ -1,9 +1,8 @@
 /*
 双11环游记大富翁
-0 2,15 1-11 11 * jd_travel_shop.js
-#https://github.com/star261/jd/tree/main/scripts
-#https://raw.githubusercontent.com/star261/jd/main/scripts/jd_travel_shop.js
-脚本跑起来时间比较久，没有卡开，忘记有没有加购了 0 0
+0 2 1-11 11 * jd_travel_shop.js
+https://raw.githubusercontent.com/star261/jd/main/scripts/jd_travel_shop.js
+脚本跑起来时间比较久，没有卡开，有加购
 * */
 const $ = new Env('双11环游记大富翁');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -166,6 +165,9 @@ async function main(cookie) {
                     console.log(JSON.stringify(finishInfo)+'\n');
                     await $.wait(2000);
                 }
+                thisBody = `{"shopId":"${shopId}","venderId":"${venderId}","miniAppId":"${appId}"}`;
+                let taskGoods = await takeRequest('',`functionId=jm_hidden_tryDoTask&body=${encodeURIComponent(thisBody)}&t=${Date.now()}&eid=&appid=shop_view&clientVersion=10.0.0&client=wh5&uuid=8888`,cookie);
+                console.log(JSON.stringify(taskGoods));
             }
         }
     }else{
