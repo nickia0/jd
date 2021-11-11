@@ -1,6 +1,6 @@
 /*
 双11环游记大富翁
-0 2,16 1-11 11 * jd_travel_shop.js
+
 https://raw.githubusercontent.com/star261/jd/main/scripts/jd_travel_shop.js
 脚本跑起来时间比较久，没有卡开，有加购
 * */
