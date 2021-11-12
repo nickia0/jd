@@ -1,7 +1,7 @@
 /*
 * APP-》智能生活-》右侧浮窗
 * 一天跑1次
-6 18 1-28 10 * jd_chinaJoy.js
+6 18 1-28 10 * 
 * */
 const $ = new Env('京东小家');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
