@@ -1,7 +1,7 @@
 /**
  特务Z
  脚本没有自动开卡，会尝试领取开卡奖励
-23 8,9 * * * jd_productZ4Brand.js
+23 14,18 * * * jd_productZ4Brand.js
 https://raw.githubusercontent.com/star261/jd/main/scripts/jd_productZ4Brand.js
  一天要跑2次
  */
