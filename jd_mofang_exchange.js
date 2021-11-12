@@ -1,6 +1,6 @@
 /**
 京东小魔方兑换
-0 3,15 * * * jd_mofang_exchange.js
+3 3 * * * jd_mofang_exchange.js
 */
 const $ = new Env('京东小魔方兑换');
 const notify = $.isNode() ? require('./sendNotify') : '';
