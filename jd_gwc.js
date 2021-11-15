@@ -1,5 +1,6 @@
 /*
  jd_gwc.js
+ https://github.com/FKPYW/dongge
 */
 const $ = new Env('加购物车抽奖');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
