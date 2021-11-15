@@ -1,5 +1,5 @@
 /*
-1 10 * * * jd_gwc.js
+ jd_gwc.js
 */
 const $ = new Env('加购物车抽奖');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
