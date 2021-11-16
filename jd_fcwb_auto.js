@@ -1,6 +1,6 @@
 /*
 #发财挖宝
-30 0-23/6 * * * jd_fcwb_auto.js
+jd_fcwb_auto.js
  */
 const $ = new Env('发财挖宝');
 const notify = $.isNode() ? require('./sendNotify') : '';
