@@ -1,6 +1,6 @@
 /*
 发财挖宝
-6 12,16 * * * jd_fcwb.js
+jd_fcwb.js
 */
 const $ = new Env('发财挖宝');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
