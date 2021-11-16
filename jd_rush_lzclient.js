@@ -1,6 +1,6 @@
 /*
-2 9 * * * jd_rush_lzclient.js
-https://lzkj-isv.isvjcloud.com/lzclient/12345/cjwx/common/entry.html?activityId=xxxx
+2 9 * * 2 jd_rush_lzclient.js
+
 */
 const $ = new Env('超级无线店铺抽奖');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
