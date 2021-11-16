@@ -1,5 +1,5 @@
 /*
-
+2 9 * * * jd_rush_lzclient.js
 https://lzkj-isv.isvjcloud.com/lzclient/12345/cjwx/common/entry.html?activityId=xxxx
 */
 const $ = new Env('超级无线店铺抽奖');
@@ -7,8 +7,6 @@ const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 let cookiesArr = [], cookie = '', message = '';
 let activityIdList = [
-"f693ca943bce4b53ac2ff1e0c82b6fdf",
-"76679dd63ba240dc859972ef743920ba",
 ]
 let lz_cookie = {}
 
@@ -35,7 +33,7 @@ if ($.isNode()) {
         $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', { "open-url": "https://bean.m.jd.com/bean/signIndex.action" });
         return;
     }
-    // activityIdList = await getActivityIdList('game.json')
+    activityIdList = await getActivityIdList('https://raw.githubusercontent.com/FKPYW/dongge/master/code/gameType.json')
     for(let a in activityIdList){
         activityId = activityIdList[a];
         console.log("开起第 "+ a +" 个活动，活动id："+activityId)
