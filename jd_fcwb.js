@@ -1,12 +1,7 @@
 /*
-发财挖宝: 入口,极速版-我的,发财挖宝
-说明
-1、脚本只执行助力和做1个任务,需要手动进活动进行游戏
-2、第一个账号会助力作者，其他账号助力第CK1
-=================================Quantumultx=========================
-[task_local]
 #发财挖宝
-5 0-23/2 * * * https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_fcwb.js, tag=发财挖宝, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+5 0-23/6 * * * jd_fcwb.js
+https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_fcwb.js
 */
 const $ = new Env('发财挖宝');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
