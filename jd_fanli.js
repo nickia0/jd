@@ -1,9 +1,8 @@
 
 /* 
 京东饭粒
-0 0,12,22 * * * jd_fanli.js
+0 0,9,17 * * * jd_fanli.js
 https://raw.githubusercontent.com/KingRan/JDJB/main/jd_fanli.js
-
 */
 
 const $ = new Env('京东饭粒');
@@ -65,7 +64,7 @@ if ($.isNode()) {
                             if($.taskList[i].taskId!==null){
                                 await saveTaskRecord(cookie,$.taskList[i].taskId,$.taskList[i].businessId,$.taskList[i].taskType)
                                 if($.sendBody){
-                                    await $.wait(10000)
+                                    await $.wait(Number($.taskList[i].watchTime)*1000 + Math.floor(Math.random()*1000))
                                     await saveTaskRecord1(cookie,$.taskList[i].taskId,$.taskList[i].businessId,$.taskList[i].taskType,$.sendBody.uid,$.sendBody.tt)
                                 }
                                 else{
