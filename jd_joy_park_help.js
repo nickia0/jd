@@ -1,5 +1,5 @@
 /*
-
+#汪汪乐园每日助力
 30 23 * * * https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_joy_park_help.js
 */
 const $ = Env("汪汪乐园每日助力")
