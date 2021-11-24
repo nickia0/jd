@@ -1,6 +1,6 @@
 /*
 #发财挖宝
-5 0-23/6 * * * jd_fcwb.js
+jd_fcwb.js
 https://raw.githubusercontent.com/he1pu/JDHelp/main/jd_fcwb.js
 */
 const $ = new Env('发财挖宝');
