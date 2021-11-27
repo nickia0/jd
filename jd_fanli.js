@@ -1,7 +1,7 @@
-
 /*
-#京东饭粒
-40 0,9,17 * * * https://raw.githubusercontent.com/KingRan/JDJB/main/jd_fanli.js
+京东饭粒
+长期活动，结束时间未知！
+40 0,9,17 * * * https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_fanli.js
  */
 
 const $ = new Env('京东饭粒');
