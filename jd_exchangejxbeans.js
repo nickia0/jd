@@ -1,6 +1,6 @@
 /**
 过期京豆兑换为喜豆
-33 22 */3 * * jd_exchangejxbeans.js
+33 22 */2 * * jd_exchangejxbeans.js
 TG频道：https://t.me/sheeplost
 */
 const $ = new Env('京豆兑换为喜豆');
