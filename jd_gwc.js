@@ -6,7 +6,8 @@ const $ = new Env('加购物车抽奖');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 let cookiesArr = [], cookie = '', message = '';
-let activityIdList = ['6f96aa1ce3a74bd1bff3068aaf295b59',
+let activityIdList = [
+'6f96aa1ce3a74bd1bff3068aaf295b59',
 '51a8f763495242d185a5161d686c4604',
 '75acb94bd50544749860a494f509777b',
 '0baf64adb8684d8ca3450f574c3cba55',
