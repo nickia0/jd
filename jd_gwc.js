@@ -1,5 +1,5 @@
 /*
- jd_gwc.js
+ 2 16 * * 2 jd_gwc.js
  https://github.com/FKPYW/dongge
 */
 const $ = new Env('加购物车抽奖');
