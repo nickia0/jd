@@ -9,7 +9,7 @@ by:小手冰凉 tg:@chianPLA
 ============Quantumultx===============
 [task_local]
 #京东生鲜每日抽奖
-10 7 17-18 8 * jd jd_sxLottery.js
+10 7 17-18 8 * jd_sxLottery.js
 
  */
 const $ = new Env('京东生鲜每日抽奖');
