@@ -1,5 +1,5 @@
 /*
-2 9 * * 2 jd_rush_lzclient.js
+jd_rush_lzclient.js
 
 */
 const $ = new Env('超级无线店铺抽奖');
