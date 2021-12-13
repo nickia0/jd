@@ -12,9 +12,9 @@ $.sentNum = 0;
 let args_xh = {
     /*
      * 每多少个账号发送一次通知，默认为2
-     * 可通过环境变量控制 JD_BEAN_CHANGE_SENDNUM
+     * 可通过环境变量控制 BEANCHANGE_PERSENT
      * */
-    sendNum: process.env.JD_BEAN_CHANGE_SENDNUM * 1 || 2,
+    sendNum: process.env.BEANCHANGE_PERSENT * 1 || 8,
 }
 let allMessage = '';
 let ReturnMessage = '';
