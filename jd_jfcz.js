@@ -1,7 +1,7 @@
 /*
 活动地址: 京东极速版-百元生活费-玩游戏现金可提现
 #见缝插针
-5 10 * * * https://raw.githubusercontent.com/jiulan/platypus/main/scripts/jd_jfcz.js
+5 8 * * * https://raw.githubusercontent.com/jiulan/platypus/main/scripts/jd_jfcz.js
 */
 const $ = new Env('见缝插针');
 const notify = $.isNode() ? require('./sendNotify') : '';
