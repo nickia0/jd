@@ -1,8 +1,8 @@
 /**
- 特务Z
- 脚本没有自动开卡，会尝试领取开卡奖励
-23 8,9 * * * https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_superBrand.js
- 一天要跑2次
+特务Z
+脚本没有自动开卡，会尝试领取开卡奖励
+13 15,19 * * * https://raw.githubusercontent.com/star261/jd/main/scripts/jd_superBrand.js
+一天要跑2次
  */
 const $ = new Env('特务Z');
 const notify = $.isNode() ? require('./sendNotify') : '';
@@ -145,7 +145,7 @@ async function doTask(){
             if (signList.length === 0) {
                 console.log(`任务：${$.oneTask.assignmentName},信息异常`);
             }
-            if ($.oneTask.assignmentName.indexOf('首页下拉') !== -1) {
+            if ($.oneTask.assignmentName.indexOf('首页下拉') !== -1 || $.oneTask.assignmentDesc.includes('首页下拉')) {
                 for (let j = 0; j < signList.length; j++) {
                     if (signList[j].status === 1) {
                         console.log(`任务：${$.oneTask.assignmentName},去执行,请稍稍`);
