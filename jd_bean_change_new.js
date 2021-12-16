@@ -1,5 +1,5 @@
 /*
-50 20 * * * jd_bean_change_new.js
+30 21 * * * jd_bean_change_new.js
  */
 
 //详细说明参考 https://github.com/ccwav/QLScript2.
@@ -138,7 +138,7 @@ if ($.isNode() && process.env.BEANCHANGE_ALLNOTIFY) {
 		}
 	}
 	console.log(`检测到设定了公告,将在推送信息中置顶显示...`);
-	strAllNotify = `【-------公告-------】\n`+strAllNotify;
+	strAllNotify = `【✨✨✨✨公告✨✨✨✨】\n`+strAllNotify;
 	console.log(strAllNotify);
 }
 
