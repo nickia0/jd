@@ -1,12 +1,6 @@
 /*
- * 如需运行请自行添加环境变量：JD_TRY，值填 true 即可运行
- * 脚本兼容: Node.js
- *
- * @Modified from: https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_try_MyTrials.js
- * 
- * 30 8 * * * jd_try_MyTrials.js
- * 
- */ 
+30 21 * * * https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_try_MyTrials.js
+*/ 
 const $ = new Env('京东试用待领取通知')
 const URL = 'https://api.m.jd.com/client.action'
 let notifyMsg = ''
