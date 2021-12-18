@@ -1,6 +1,6 @@
 /**
 京车会签到
-19 6 * * * jd_jchsign.js
+19 6,16 * * * jd_jchsign.js
 TG频道：https://t.me/sheeplost
 */
 const $ = new Env('京车会签到');
