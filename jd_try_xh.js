@@ -1,12 +1,5 @@
 /*
- * 如需运行请自行添加环境变量：JD_TRY，值填 true 即可运行
- * 脚本兼容: Node.js
- * X1a0He留
- * 脚本是否耗时只看args_xh.maxLength的大小
- * 上一作者说了每天最多300个商店，总上限为500个，jd_unsubscribe.js我已更新为批量取关版
- * 请提前取关至少250个商店确保京东试用脚本正常运行
- *
- * @Address: https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js
+5 10 * * * https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js
  * @LastEditors: X1a0He
  */
 const $ = new Env('京东试用')
