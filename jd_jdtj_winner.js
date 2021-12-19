@@ -2,7 +2,7 @@
 京东特价--翻翻乐
 一天可翻多次，但有上限
 运气好每次可得0.3元以上的微信现金(需京东账号绑定到微信)
-27 0-23/6 * * * https://raw.githubusercontent.com/zero205/JD_tencent_scf/main/jd_jdtj_winner.js
+55 0-23/3 * * * https://raw.githubusercontent.com/zero205/JD_tencent_scf/main/jd_jdtj_winner.js
 */
 const $ = new Env('京东特价--翻翻乐');
 const notify = $.isNode() ? require('./sendNotify') : '';
