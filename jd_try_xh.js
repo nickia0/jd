@@ -1,7 +1,7 @@
 /*
-5 10 * * * https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js
- * @LastEditors: X1a0He
- */
+5 15 * * * jd_try_xh.js
+https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js
+*/
 const $ = new Env('京东试用')
 const URL = 'https://api.m.jd.com/client.action'
 let trialActivityIdList = []
