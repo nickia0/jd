@@ -5,7 +5,7 @@
 ============Quantumultx===============
 [task_local]
 #京东小魔方
-31 2,8 * * * https://raw.githubusercontent.com/KingRan/JDJB/main/jd_mofang.js, tag=京东小魔方, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+31 2,8,16 * * * https://raw.githubusercontent.com/KingRan/JDJB/main/jd_mofang.js, tag=京东小魔方, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 
 ================Loon==============
 [Script]
