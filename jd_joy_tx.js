@@ -3,7 +3,7 @@
 活动地址: 京东极速版-汪汪乐园
 
 #汪汪乐园提现
-15 10 * * * https://raw.githubusercontent.com/jiulan/platypus/main/scripts/jd_joy_tx.js
+15 10,15 * * * https://raw.githubusercontent.com/jiulan/platypus/main/scripts/jd_joy_tx.js
 */
 const $ = new Env('汪汪乐园提现');
 const notify = $.isNode() ? require('./sendNotify') : '';
