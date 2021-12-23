@@ -1,7 +1,8 @@
 /*
 京东饭粒
 长期活动，结束时间未知！
-0 0,9,17 * * * https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_fanli.js
+活动入口：https://u.jd.com/ytWx4w0
+* 9,17 * * * jd_fanli.js
  */
 
 const $ = new Env('京东饭粒');
@@ -75,7 +76,7 @@ if ($.isNode()) {
                                 } else {
                                     continue;
                                 }
-                                if ($.count.finishCount = $.count.maxTaskCount) {
+                                if ($.count.finishCount == $.count.maxTaskCount) {
                                     console.log(`任务全部完成!`);
                                 }
                             }
