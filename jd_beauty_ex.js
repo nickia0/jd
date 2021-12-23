@@ -1,6 +1,6 @@
 /*
 美丽研究院--兑换
-1 7,12,19 * * * jd_beauty_ex.js
+35 6-18/3 * * * jd_beauty_ex.js
  */
 const $ = new Env('美丽研究院--兑换');
 const notify = $.isNode() ? require('./sendNotify') : '';
