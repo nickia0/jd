@@ -1,5 +1,5 @@
 /*
-10 10 * * *jd_products_detail.js
+10 10,16 * * * jd_products_detail.js
 **/
 const $ = new Env('京喜工厂商品列表详情');
 const JD_API_HOST = 'https://m.jingxi.com/';
