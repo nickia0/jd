@@ -1,17 +1,7 @@
 /*
-京东集魔方
-by:小手冰凉 tg:@chianPLA
-交流群：https://t.me/jdPLA2
-脚本更新时间：2021-12-27 19:20
-脚本兼容: Node.js
-新手写脚本，难免有bug，能用且用。
-改自Aaron
-===========================
-[task_local]
 #京东集魔方
 31 2,8 * * * jd_mofang_j.js
- */
-
+*/
 const $ = new Env('京东集魔方');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
