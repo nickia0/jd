@@ -1,22 +1,7 @@
 /*
-京东小魔方
-已支持IOS双京东账号,Node.js支持N个京东账号
-脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
-============Quantumultx===============
-[task_local]
 #京东小魔方
-31 2,8,16 * * * https://raw.githubusercontent.com/KingRan/JDJB/main/jd_mofang.js, tag=京东小魔方, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
-
-================Loon==============
-[Script]
-cron "31 2,8 * * *" script-path=https://raw.githubusercontent.com/KingRan/JDJB/main/jd_mofang.js,tag=京东小魔方
-
-===============Surge=================
-京东小魔方 = type=cron,cronexp="31 2,8 * * *",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/KingRan/JDJB/main/jd_mofang.js
-
-============小火箭=========
-京东小魔方 = type=cron,script-path=https://raw.githubusercontent.com/KingRan/JDJB/main/jd_mofang.js, cronexpr="31 2,8 * * *", timeout=3600, enable=true
- */
+31 3,9,16 * * * jd_mofang.js
+*/
 const $ = new Env('京东小魔方');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
