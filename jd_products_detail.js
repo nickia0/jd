@@ -1,7 +1,7 @@
 /*
 10 10,16 * * * jd_products_detail.js
 **/
-const $ = new Env('京喜工厂商品列表详情');
+const $ = new Env('京喜工厂可生产商品详情');
 const JD_API_HOST = 'https://m.jingxi.com/';
 const notify = $.isNode() ? require('./sendNotify') : '';
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
