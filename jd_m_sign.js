@@ -7,7 +7,6 @@
 #京东通天塔--签到
 3 0,12 * * * jd_m_sign.js
  */
-
 const $ = new Env('京东通天塔--签到');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
