@@ -1,7 +1,7 @@
 /*
 清空购物车
 更新时间：2021-10-27
-15 6-18/6 * * * jd_cleancart.js
+15 6,12,22 * * * jd_cleancart.js
 因其他脚本会加入商品到购物车，故此脚本用来清空购物车
 包括预售
 需要算法支持
@@ -34,6 +34,7 @@ pin3@&@不清空👉该pin不清空
 ——————————————
 如果有不清空的一定要加上"*@&@不清空"
 防止没指定的账号购物车全清空
+
 */
 let jdSignUrl = 'https://jd.smiek.tk/jdcleancatr_21102717' // 算法url
 let cleancartRun = 'true'
@@ -56,7 +57,7 @@ if ($.isNode()) {
 
 message = ''
 
-jdSignUrl = 'https://jd.smiek.tk/jdcleancatr_21102717';
+jdSignUrl = $.isNode() ? (process.env.gua_cleancart_SignUrl ? process.env.gua_cleancart_SignUrl : `${jdSignUrl}`) : ($.getdata('gua_cleancart_SignUrl') ? $.getdata('gua_cleancart_SignUrl') : `${jdSignUrl}`);
 
 cleancartRun = $.isNode() ? (process.env.gua_cleancart_Run ? process.env.gua_cleancart_Run : `${cleancartRun}`) : ($.getdata('gua_cleancart_Run') ? $.getdata('gua_cleancart_Run') : `${cleancartRun}`);
 
