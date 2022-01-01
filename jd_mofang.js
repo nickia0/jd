@@ -9,7 +9,7 @@ by:小手冰凉 tg:@chianPLA
 ===========================
 [task_local]
 #京东集魔方
-31 2,9,16 * * * jd_mofang_j.js
+31 2,9,16 * * * jd_mofang.js
  */
 
 const $ = new Env('京东集魔方');
