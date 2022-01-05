@@ -82,7 +82,8 @@ function getCommodityDetail(commodityId, num) {
                     const { starLevel, name, price, productLimSeconds } = commodityList[0];
                         showMsg += `⭐️商品--${name}, 所需等级 ${starLevel}，所需电力: ${price / 100} 万，限时 ${
                             productLimSeconds / 60 / 60 / 24
-                        } 天，📦库存：${num}，最短需要 ${(price / 864 / 2).toFixed(2)} \n`;
+                        } 天，
+                        📦库存：${num}，最短需要 ${(price / 864 / 2).toFixed(2)} \n`;
                     ;
                 } catch (e) {
                     $.logErr(e, resp);
