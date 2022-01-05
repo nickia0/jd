@@ -1,6 +1,6 @@
 /*
 财富岛珍珠兑换
-59 0-23/1 * * * https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_cfd_pearl_ex.js
+https://raw.githubusercontent.com/shufflewzc/faker2/main/jd_cfd_pearl_ex.js
 更新时间：2021-9-11
 活动入口：京喜APP-我的-京喜财富岛-最左侧建筑
  */
