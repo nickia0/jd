@@ -80,11 +80,11 @@ function getCommodityDetail(commodityId, num) {
                     const { ret, data: { commodityList = [] } = {}, msg } = JSON.parse(data);
                     // $.log(`\n获取商品详情：${msg}\n${$.showLog ? data : ''}`);
                     const { starLevel, name, price, productLimSeconds } = commodityList[0];
-                        showMsg += `⭐️商品--${name},  所需工厂等级 ${starLevel}
+                        showMsg += `⭐️商品名称：${name}，所需工厂等级 ${starLevel}级
         ⚡️所需电力: ${price / 100} 万，限时 ${
                             productLimSeconds / 60 / 60 / 24
                         } 天内完成
-        📦库存：${num}件，最短只需要 ${(price / 864 / 2).toFixed(2)} 天完成\n`;
+        📦库存：${num}件，最短只需要 ${(price / 864 / 2).toFixed(2)} 天可完成\n`;
                     ;
                 } catch (e) {
                     $.logErr(e, resp);
