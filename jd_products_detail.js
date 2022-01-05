@@ -80,10 +80,11 @@ function getCommodityDetail(commodityId, num) {
                     const { ret, data: { commodityList = [] } = {}, msg } = JSON.parse(data);
                     // $.log(`\n获取商品详情：${msg}\n${$.showLog ? data : ''}`);
                     const { starLevel, name, price, productLimSeconds } = commodityList[0];
-                        showMsg += `⭐️商品--${name}, 所需等级 ${starLevel}，所需电力: ${price / 100} 万
---限时 ${
+                        showMsg += `⭐️商品--${name}, 所需等级 ${starLevel}
+      所需电力: ${price / 100} 万，限时 ${
                             productLimSeconds / 60 / 60 / 24
-                        } 天，📦库存：${num}，最短需要 ${(price / 864 / 2).toFixed(2)} 天\n`;
+                        } 天
+      📦库存：${num}，最短需要 ${(price / 864 / 2).toFixed(2)} 天\n`;
                     ;
                 } catch (e) {
                     $.logErr(e, resp);
