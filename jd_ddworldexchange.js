@@ -1,9 +1,8 @@
-
 /**
 东东世界兑换
- */30 * * * * jd_ddworldexchange.js
+0,30 * * * * jd_ddworldexchange.js
 TG频道：https://t.me/sheeplost
-**/
+*/
 const $ = new Env("东东世界兑换");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
