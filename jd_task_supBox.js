@@ -1,4 +1,5 @@
-const Template = require('./function/template');
+//12 0,22 * * * jd_task_supBox.js
+const Template = require("./function/template");
 
 class Main extends Template {
     constructor() {
