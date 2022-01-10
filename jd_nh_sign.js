@@ -2,14 +2,14 @@
 年货签到
 by:小手冰凉 tg:@chianPLA
 交流群：https://t.me/jdPLA2
-脚本更新时间：2021-12-27 19:20
+脚本更新时间：2022-1-9
 脚本兼容: Node.js
 新手写脚本，难免有bug，能用且用。
 改自Aaron
 ===========================
 [task_local]
 #年货签到
-0 2,8,20 * * * jd_nh_sign.js
+0 1,2,20 * * * jd_nh_sign.js
  */
 
 const $ = new Env('年货签到');
