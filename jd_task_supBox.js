@@ -1,4 +1,4 @@
-const Template = require('./template');
+const Template = require('./function/template');
 
 class Main extends Template {
     constructor() {
