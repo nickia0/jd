@@ -1,5 +1,5 @@
 //12 0,22 * * * jd_task_supBox.js
-const Template = require("./function/template");
+const Template = require("./template");
 
 class Main extends Template {
     constructor() {
