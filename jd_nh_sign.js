@@ -9,7 +9,7 @@ by:小手冰凉 tg:@chianPLA
 ===========================
 [task_local]
 #年货签到
-0 1,2,20 * * * jd_nh_sign.js
+8 1,2,20 * * * jd_nh_sign.js
  */
 
 const $ = new Env('年货签到');
