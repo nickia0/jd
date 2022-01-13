@@ -1,6 +1,6 @@
 /*
 京东金榜
-13 6 * * * jd_gold_sign.js
+13 6,13 * * * jd_gold_sign.js
 */
 const $ = new Env('京东金榜');
 const notify = $.isNode() ? require('./sendNotify') : '';
