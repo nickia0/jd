@@ -4,7 +4,7 @@
 活动入口：https://u.jd.com/ytWx4w0
 * 9,17 * * * jd_fanli.js
  */
-const $ = new Env('搞基大神-饭粒');
+const $ = new Env('京东饭粒');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
