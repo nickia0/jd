@@ -1,5 +1,5 @@
 /*
-30 21 * * * jd_bean_change_new.js
+30 18 * * * jd_bean_change_new.js
  */
 
 //详细说明参考 https://github.com/ccwav/QLScript2.
