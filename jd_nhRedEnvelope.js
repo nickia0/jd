@@ -32,7 +32,7 @@ if ($.isNode()) {
 }
 rebatePin = $.isNode() ? (process.env.gua_nhjRed_rebatePin ? process.env.gua_nhjRed_rebatePin : `${rebatePin}`) : ($.getdata('gua_nhjRed_rebatePin') ? $.getdata('gua_nhjRed_rebatePin') : `${rebatePin}`);
 let rebatePinArr = rebatePin && rebatePin.split(',') || []
-let rebateCode = '
+let rebateCode = 'SM96adR'
 message = ''
 newCookie = ''
 resMsg = ''
