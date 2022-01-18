@@ -16,7 +16,7 @@ const JD_API_HOST = 'https://api.m.jd.com';
 let cookiesArr = [], cookie = '', message;
 let status = ''
 
-let inviteCodes = ["3b8c4f784509442580dca5c3f15c893a-bGl1ejk5ODg!"]
+let inviteCodes = []
 
 if ($.isNode()) {
      Object.keys(jdCookieNode).forEach((item) => {
