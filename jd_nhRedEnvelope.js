@@ -12,7 +12,7 @@ pin1换成对应的pin值 用,分开
 只助力2个 满了脚本自动从ck1开始替换未满的
 export gua_nhjRed_rebatePin="pin1,pin2"
 */
-let rebateCodes = 'SM96adR'
+let rebateCodes = 'Sw4X0ps'
 let rebatePin = ''
 const $ = new Env('年货节红包');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -32,7 +32,7 @@ if ($.isNode()) {
 }
 rebatePin = $.isNode() ? (process.env.gua_nhjRed_rebatePin ? process.env.gua_nhjRed_rebatePin : `${rebatePin}`) : ($.getdata('gua_nhjRed_rebatePin') ? $.getdata('gua_nhjRed_rebatePin') : `${rebatePin}`);
 let rebatePinArr = rebatePin && rebatePin.split(',') || []
-let rebateCode = 'SM96adR'
+let rebateCode = 'Sw4X0ps'
 message = ''
 newCookie = ''
 resMsg = ''
