@@ -12,7 +12,7 @@ pin1换成对应的pin值 用,分开
 只助力2个 满了脚本自动从ck1开始替换未满的
 export gua_nhjRed_rebatePin="pin1,pin2"
 */
-let rebateCodes = 'Sw4X0ps'
+let rebateCodes = ''
 let rebatePin = ''
 const $ = new Env('年货节红包');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -32,7 +32,7 @@ if ($.isNode()) {
 }
 rebatePin = $.isNode() ? (process.env.gua_nhjRed_rebatePin ? process.env.gua_nhjRed_rebatePin : `${rebatePin}`) : ($.getdata('gua_nhjRed_rebatePin') ? $.getdata('gua_nhjRed_rebatePin') : `${rebatePin}`);
 let rebatePinArr = rebatePin && rebatePin.split(',') || []
-let rebateCode = 'Sw4X0ps'
+let rebateCode = ''
 message = ''
 newCookie = ''
 resMsg = ''
@@ -141,7 +141,7 @@ let timeH = $.time('H')
 
 async function run(type = 0){
   try{
-    rebateCodes = ["SSM96adR"];
+    rebateCodes = ["Sw4X0ps", "PtKbWis"];
     rebateCodes = rebateCodes[Math.floor((Math.random() * rebateCodes.length))]
     rebateCodes = $.isNode() ? (process.env.gua_nhjRed_rebateCode ? process.env.gua_nhjRed_rebateCode : `${rebateCodes}`) : ($.getdata('gua_nhjRed_rebateCode') ? $.getdata('gua_nhjRed_rebateCode') : `${rebateCodes}`);
     rebateCode = rebateCodes
