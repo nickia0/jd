@@ -2,7 +2,7 @@
 tgchannel：https://t.me/Ariszy8028
 github：https://github.com/Ariszy/Private-Script
 boxjs：https://raw.githubusercontent.com/Ariszy/Private-Script/master/Ariszy.boxjs.json
-23 0,10,16 * * * jd_festival.js
+23 0-23/3 * * * jd_festival.js
 */
 const $ = new Env('点鞭炮赢京豆')
 const notify = $.isNode() ?require('./sendNotify') : '';
