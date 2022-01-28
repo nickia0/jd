@@ -2,7 +2,7 @@
 京东饭粒
 长期活动，结束时间未知！
 活动入口：https://u.jd.com/ytWx4w0
-8 0,9,17 * * * jd_fanli.js
+8 0-23/6 * * * jd_fanli.js
  */
 const $ = new Env('京东饭粒');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
