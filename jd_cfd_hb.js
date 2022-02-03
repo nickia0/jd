@@ -1,8 +1,7 @@
-
 /*
 财富岛兑换红包
 50 * * * * jd_cfd_hb.js
- */
+*/
 const $ = new Env('财富岛兑换红包');
 CryptoScripts()
 $.CryptoJS = $.isNode() ? require('crypto-js') : CryptoJS;
