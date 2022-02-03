@@ -6,7 +6,7 @@
 =================================Quantumultx=========================
 [task_local]
 #京东特价翻翻乐
-15 0-23/3 * * * https://raw.githubusercontent.com/KingRan/JDJB/main/jd_jdtj_winner.js
+https://raw.githubusercontent.com/KingRan/JDJB/main/jd_jdtj_winner.js
 */
 const $ = new Env('京东特价翻翻乐');
 const notify = $.isNode() ? require('./sendNotify') : '';
