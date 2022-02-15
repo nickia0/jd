@@ -1,6 +1,6 @@
 /*
 财富岛兑换红包
-50 * * * * jd_cfd_hb.js
+58 * * * * jd_cfd_hb.js
 */
 const $ = new Env('财富岛兑换红包');
 CryptoScripts()
