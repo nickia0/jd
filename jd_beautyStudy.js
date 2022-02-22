@@ -4,7 +4,7 @@
 https://raw.githubusercontent.com/aTenb/jdOpenSharePicker/master/jd_beautyStudy.js
 更新时间:2021-12-03
 活动入口：京东app首页-美妆馆-底部中间按钮
-40 7,12,19 * * * jd_beautyStudy.js
+40 8,13,16,21 * * * jd_beautyStudy.js
  */
 const $ = new Env('美丽研究院');
 const notify = $.isNode() ? require('./sendNotify') : '';
