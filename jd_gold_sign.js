@@ -8,7 +8,7 @@ by:小手冰凉 tg:@chianPLA
 ===================quantumultx================
 [task_local]
 #京东金榜
-13 7,9 * * * jd_gold_sign.js
+
 
  */
 const $ = new Env('京东金榜');
