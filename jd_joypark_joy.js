@@ -9,20 +9,8 @@ JOY_COIN_MAXIMIZE =      最大化硬币收益，如果合成后全部挖土后�
 
 更新地址：https://github.com/Tsukasa007/my_script
 
-============Quantumultx===============
-[task_local]
 #汪汪乐园养joy
-20 0-23/3 * * * jd_joypark_joy.js, tag=汪汪乐园养joy, img-url=https://raw.githubusercontent.com/tsukasa007/icon/master/jd_joypark_joy.png, enabled=true
-
-================Loon==============
-[Script]
-cron "20 0-23/3 * * *" script-path=jd_joypark_joy.js,tag=汪汪乐园养joy
-
-===============Surge=================
-汪汪乐园养joy = type=cron,cronexp="20 0-23/3 * * *",wake-system=1,timeout=3600,script-path=jd_joypark_joy.js
-
-============小火箭=========
-汪汪乐园养joy = type=cron,script-path=jd_joypark_joy.js, cronexpr="20 0-23/3 * * *", timeout=3600, enable=true
+10 0-23/3 * * * jd_joypark_joy.js
 */
 const $ = new Env('汪汪乐园养joy');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
