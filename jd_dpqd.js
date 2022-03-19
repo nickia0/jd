@@ -1,6 +1,6 @@
 /*
 店铺签到，各类店铺签到，有新的店铺直接添加token即可
-15 1,17 * * * jd_dpqd.js
+15 1,20 * * * jd_dpqd.js
 https://github.com/KingRan/KR/blob/main/jd_dpqd.js
 */
 const $ = new Env('店铺签到');
