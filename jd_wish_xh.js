@@ -1,6 +1,6 @@
 /*
 众筹许愿池
-40 0,22 * * * jd_wish_xh.js
+40 6,22 * * * jd_wish_xh.js
 */
 const $ = new Env('众筹许愿池');
 const notify = $.isNode() ? require('./sendNotify') : '';
