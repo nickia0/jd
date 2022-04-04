@@ -5,7 +5,7 @@ ENV
 JOY_COIN_MAXIMIZE =      最大化硬币收益，如果合成后全部挖土后还有空位，则开启此模式（默认开启） 0关闭 1开启
 
 #汪汪乐园养joy
-10 0-23/3 * * * jd_joypark_joy.js
+10 0-23/3 * * * jd_joy_park.js
 */
 const $ = new Env('汪汪乐园养joy');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
