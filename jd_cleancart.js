@@ -1,5 +1,5 @@
 /*
-10 23 * * * jd_cleancart.js
+10 7,23 * * * jd_cleancart.js
 */
 const $ = new Env('清空购物车');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
