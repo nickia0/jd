@@ -88,7 +88,9 @@ function getCart_xh(){
     console.log('正在获取购物车数据...')
     return new Promise((resolve) => {
         const option = {
-	@@ -94,53 +113,51 @@ function getCart_xh(){
+            url: 'https://p.m.jd.com/cart/cart.action?fromnav=1&sceneval=2',
+            headers: {
+                "Cookie": cookie,
                 "User-Agent": "jdapp;JD4iPhone/167724 (iPhone; iOS 15.0; Scale/3.00)",
             },
         }
@@ -142,7 +144,12 @@ function cartFilter_xh(cartData){
                     else postBody += `${mainSkuId},,1,${mainSkuId},11,${pid},0,skuUuid:${skuUuid}@@useUuid:0$`
                     $.pushed += 1;
                 } else {
-	@@ -153,7 +170,8 @@ function cartFilter_xh(cartData){
+                    console.log(`\n${mainSkuName}`)
+                    console.log(`商品已被过滤，原因：包含关键字 ${$.keyword}`)
+                    $.isKeyword = true
+                }
+            }
+        }
     }
     postBody += `&type=0&checked=0&locationid=${$.areaId}&templete=1&reg=1&scene=0&version=20190418&traceid=${$.traceId}&tabMenuType=1&sceneval=2`
 }
@@ -150,7 +157,12 @@ function removeCart(){
     console.log('正在删除购物车数据...')
     return new Promise((resolve) => {
         const option = {
-	@@ -166,73 +184,465 @@ function removeCart(){
+            url: 'https://wq.jd.com/deal/mshopcart/rmvCmdy?sceneval=2&g_login_type=1&g_ty=ajax',
+            body: postBody,
+            headers: {
+                "Cookie": cookie,
+                "User-Agent": "jdapp;JD4iPhone/167724 (iPhone; iOS 15.0; Scale/3.00)",
+                "referer": "https://p.m.jd.com/",
                 "origin": "https://p.m.jd.com/"
             },
         }
