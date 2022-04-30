@@ -5,7 +5,7 @@
 let jdSignUrl = 'https://api.zhezhe.cf/jd/sign'
 let jdPandaToken = ''
 let cleancartRun = 'false'
-let gua_cleancart_Run='true'
+let gua_cleancart_Run= 'true'
 let cleancartProducts = '*@&@'
 let lnrequesttimes=0
 const $ = new Env('清空购物车_Panda');
