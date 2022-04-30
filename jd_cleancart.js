@@ -4,7 +4,7 @@
 */
 let jdSignUrl = 'https://api.zhezhe.cf/jd/sign'
 let jdPandaToken = ''
-let cleancartRun = 'false'
+let cleancartRun = 'true'
 let gua_cleancart_Run= 'true'
 let cleancartProducts = '*@&@'
 let lnrequesttimes=0
