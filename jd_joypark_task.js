@@ -2,7 +2,7 @@
 
 脚本默认会帮我助力开工位，介意请添加变量HELP_JOYPARK，false为不助力
 export HELP_JOYPARK=""
-20 0,7,9,17,20 * * * jd_joypark_task.js
+20 0,7,9,17,20 * * * jd_.js
 */
 const $ = new Env('汪汪乐园每日任务');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
