@@ -182,7 +182,7 @@ function taskPostUrl(function_id, body) {
       "Accept": "*/*",
       "User-Agent": `jdapp;iPhone;10.1.0;13.5;${$.UUID};network/wifi;model/iPhone11,6;addressid/4596882376;appBuild/167774;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1`,
       "Accept-Language": "zh-cn",
-      "Referer": "https://prodev.m.jd.com/mall/active/eEcYM32eezJB7YX4SBihziJCiGV/index.html",
+      "Referer": "https://prodev.m.jd.com/mall/active/N2p5dHzdwxnAqp182PVJmc5L5Se/index.html",
       "Accept-Encoding": "gzip, deflate, br",
       "Content-Type": "application/json",
       "Cookie": cookie,
