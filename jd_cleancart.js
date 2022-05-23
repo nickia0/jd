@@ -1,6 +1,6 @@
 /*
 清空购物车_Panda接口专用版
-10 7,22 * * * jd_cleancart.js
+30 7,19 * * * jd_cleancart.js
 */
 let jdSignUrl = 'https://api.zhezhe.cf/jd/sign'
 let jdPandaToken = ''
