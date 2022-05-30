@@ -189,7 +189,10 @@ async function run(){
     if(msg){
       message += `【京东账号${$.index}】${$.nickName || $.UserName}\n${msg}\n`
     }
-    await $.wait(parseInt(Math.random() * 2000 + 2000, 10))
+    if(!$.out){
+      console.log('等待45秒')
+      await $.wait(parseInt(Math.random() * 2000 + 40000, 10))
+    }
   }catch(e){
     console.log(e)
   }
@@ -220,6 +223,9 @@ function jdApi(functionId,body) {
             if(res.mainTitle) console.log(res.mainTitle)
             if(res.resultCode == 0){
               resolve(res);
+            }else if (res.tips && res.tips.includes("正在努力加载")){
+              console.log("请求太快，ip被限制了")
+              $.out = true
             }
           }
         }
