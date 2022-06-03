@@ -40,20 +40,6 @@ let roundList = [];
 let awardState = '';//上期活动的京豆是否收取
 let randomCount = $.isNode() ? 20 : 5;
 let num;
-//
-//let NowHour = new Date().getHours();
-//let llhelp=true;
-//if ($.isNode() && process.env.CC_NOHELPAFTER8) {
-//	console.log(NowHour);
-//	if (process.env.CC_NOHELPAFTER8=="true"){
-//		if (NowHour>8){
-//			llhelp=false;
-//			console.log(`现在是9点后时段，不启用互助....`);
-//		}			
-//	}	
-//}
-
-
 !(async () => {  
   await requireConfig();
   if (!cookiesArr[0]) {
@@ -129,9 +115,7 @@ async function jdPlantBean() {
       await doCultureBean();
       await doGetReward();
       await showTaskProcess();
-//      if(llhelp){
-//		  await doHelp()
-//	  }
+	  await doHelp();
       await plantShareSupportList();
     } else {
       console.log(`种豆得豆-初始失败:  ${JSON.stringify($.plantBeanIndexResult)}`);
