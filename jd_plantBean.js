@@ -115,7 +115,7 @@ async function jdPlantBean() {
       await doCultureBean();
       await doGetReward();
       await showTaskProcess();
-	  await doHelp();
+      await doHelp();//助力
       await plantShareSupportList();
     } else {
       console.log(`种豆得豆-初始失败:  ${JSON.stringify($.plantBeanIndexResult)}`);
