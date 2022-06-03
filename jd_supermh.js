@@ -7,7 +7,7 @@
 ============Quantumultx===============
 [task_local]
 #京东超级盲盒
-1 21 3,17 6 * jd_supermh.js
+1 20 3,17 6 * jd_supermh.js
 */
 
 const $ = new Env('京东超级盲盒');
