@@ -567,7 +567,7 @@ function try_MyTrials(page, selected) {
                         if (selected === 2) {
                             if (data.success && data.data) {
                                 for (let item of data.data.list) {
-                                    item.status === 4 || item.text.text.includes('试用资格已放弃 ? $.giveupNum += 1 : ''
+                                    item.status === 4 || item.text.text.includes('试用资格已放弃') ? $.giveupNum += 1 : ''
                                     item.status === 2 && item.text.text.includes('试用资格将保留') ? $.successNum += 1 : ''
                                     item.status === 2 && item.text.text.includes('请收货后尽快提交报告') ? $.getNum += 1 : ''
                                     item.status === 2 && item.text.text.includes('试用已完成') ? $.completeNum += 1 : ''
