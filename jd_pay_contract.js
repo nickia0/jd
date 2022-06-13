@@ -7,7 +7,7 @@
 #检查并停用免密支付
 35 18 * * * jd_pay_contract.js
  */
-let JD_PAY_CONTRACT = 'true'
+let JD_PAY_CONTRACT =true
 const $ = new Env("检查并停用免密支付")
 const LOGS = []
 const USER_AGENT = 'jdapp;iPhone;10.3.6;M/5.0;JDEbook/openapp.jdreader;appBuild/167963;jdSupportDarkMode/0;Mozilla/5.0 (iPhone; CPU iPhone OS 15_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1;'
@@ -104,7 +104,7 @@ const PAY_CONTRACT = new class {
     process.env = {}
   }
   if (!process.env['JD_PAY_CONTRACT']) {
-    process.env['JD_PAY_CONTRACT'] = false
+    process.env['JD_PAY_CONTRACT'] = true
   }
   if (process.env['JD_PAY_CONTRACT'].toString().toLocaleLowerCase() !== 'true') {
     console.log(`当前未启用检查并停用免密支付\n如需启用请添加 JD_PAY_CONTRACT=true\n`)
