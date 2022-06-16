@@ -5,7 +5,7 @@
  * 多个账户需要跳过检查可多次添加 JD_PAY_CONTRACT_IGNORE
 [task_local]
 #检查并停用免密支付
-35 18 * * * jd_pay_contract.js
+35 18 * * * jd_pay_close.js
  */
 let JD_PAY_CONTRACT =true
 const $ = new Env("检查并停用免密支付")
