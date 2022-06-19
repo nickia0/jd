@@ -6,7 +6,7 @@
 一起冲真瘠薄卡，定时自定义
 45 0-23/3 * * * jd_mpdz_car.js
 */
-let car_addsku='true'
+let car_addsku = 'true'
 const $ = new Env("头文字J");
 const jdCookieNode=$.isNode()?require('./jdCookie.js'):'';
 const notify=$.isNode()?require('./sendNotify'):'';
