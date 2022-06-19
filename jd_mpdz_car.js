@@ -4,7 +4,7 @@
 第一个账号助力作者 其他依次助力CK1
 默认不做加购任务，如需要，请设置变量erport car_addsku='true'
 一起冲真瘠薄卡，定时自定义
-45 0-23/3 * * * jd_mpdz_car.js
+45 1-23/6 * * * jd_mpdz_car.js
 */
 let car_addsku = 'true'
 const $ = new Env("头文字J");
