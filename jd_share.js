@@ -3,13 +3,11 @@
 一共有2个变量
 jd_fxyl_activityId  活动ID 必需
 
-
 其他变量：
 OWN_COOKIE_NUM  需要被助力的人数
 HELP_COOKIE_NUM 助力的人数
 
 作者：小埋
-
 
 */
 const $ = new Env("LZ分享有礼");

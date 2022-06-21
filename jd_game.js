@@ -4,7 +4,6 @@ LZ店铺通用游戏任务
 https://lzkj-isv.isvjcloud.com/wxgame/activity/8530275?activityId=xxxxxx
 
 即时任务，无需cron,短期或者长期请参考活动规则设置cron
-
 */
 
 const $ = new Env('LZ店铺通用游戏任务-加密');

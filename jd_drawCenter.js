@@ -7,9 +7,7 @@ https://lzkj-isv.isvjcloud.com/drawCenter/activity/8530275?activityId=xxxxxx
 // export jd_drawCenter_activityId="活动ID"
 
 打破常规，不开通会员照样领取奖励
-
 6.9更新：优化日志输出，感谢某大佬的付出
-
 即时任务，无需cron,短期或者长期请参考活动规则设置cron
 
 */
