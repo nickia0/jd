@@ -1,5 +1,5 @@
 /*
-20 18 * * * jd_bean_change_new.js
+20 10 * * * jd_bean_change.js
 https://raw.githubusercontent.com/ccwav/QLScript2/main/jd_bean_change.js
  */
 
@@ -62,7 +62,7 @@ let strAllNotify="";
 let strSubNotify="";
 let llPetError=false;
 let strGuoqi="";
-let RemainMessage = '';
+let RemainMessage = '\n';
 //RemainMessage += "⭕活动攻略:⭕" + '\n';
 //RemainMessage += '【极速金币】京东极速版->我的->金币(极速版使用)\n';
 //RemainMessage += '【京东赚赚】微信->京东赚赚小程序->底部赚好礼->提现无门槛红包(京东使用)\n';
@@ -720,20 +720,24 @@ async function showMsg() {
 			strsummary += `【当前京豆】${$.beanCount-$.beanChangeXi}豆(≈${(($.beanCount-$.beanChangeXi)/ 100).toFixed(2)}元)\n`;
 		}			
 	}
-	
+
 	if (EnableJxBeans) {
-		ReturnMessage += `【今日喜豆】收${$.todayinJxBean}豆`;		
-		if ($.todayOutJxBean != 0) {
-			ReturnMessage += `,支${$.todayOutJxBean}豆`;			
-		}
-		ReturnMessage += `\n`;		
-		ReturnMessage += `【昨日喜豆】收${$.inJxBean}豆`;		
-		if ($.OutJxBean != 0) {
-			ReturnMessage += `,支${$.OutJxBean}豆`;			
-		}
-		ReturnMessage += `\n`;		
-		ReturnMessage += `【当前喜豆】${$.xibeanCount}喜豆(≈${($.xibeanCount/ 100).toFixed(2)}元)\n`;
-		strsummary += `【当前喜豆】${$.xibeanCount}豆(≈${($.xibeanCount/ 100).toFixed(2)}元)\n`;
+	    if ($.todayinJxBean || $.todayOutJxBean) {
+	        ReturnMessage += `【今日喜豆】收${$.todayinJxBean}豆`;
+	        if ($.todayOutJxBean != 0) {
+	            ReturnMessage += `,支${$.todayOutJxBean}豆`;
+	        }
+	        ReturnMessage += `\n`;
+	    }
+	    if ($.inJxBean || $.OutJxBean) {
+	        ReturnMessage += `【昨日喜豆】收${$.inJxBean}豆`;
+	        if ($.OutJxBean != 0) {
+	            ReturnMessage += `,支${$.OutJxBean}豆`;
+	        }
+			ReturnMessage += `\n`;
+	    }	    
+	    ReturnMessage += `【当前喜豆】${$.xibeanCount}喜豆(≈${($.xibeanCount/ 100).toFixed(2)}元)\n`;
+	    strsummary += `【当前喜豆】${$.xibeanCount}豆(≈${($.xibeanCount/ 100).toFixed(2)}元)\n`;
 	}
 
 
@@ -1696,7 +1700,7 @@ function getCoupon() {
             url: `https://wq.jd.com/activeapi/queryjdcouponlistwithfinance?state=1&wxadd=1&filterswitch=1&_=${Date.now()}&sceneval=2&g_login_type=1&callback=jsonpCBKB&g_ty=ls`,
             headers: {
                 'authority': 'wq.jd.com',
-                "User-Agent": $.isNode() ? (process.env.JD_USER_AGENT ? process.env.JD_USER_AGENT : (require('./USER_AGENTS').USER_AGENT)) : ($.getdata('JDUA') ? $.getdata('JDUA') : "jdapp;iPhone;9.4.4;14.3;network/4g;Mozilla/5.0 (iPhone; CPU iPhone OS 14_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1"),
+                "User-Agent": "jdapp;iPhone;10.1.2;15.0;network/wifi;Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1",
                 'accept': '*/*',
                 'referer': 'https://wqs.jd.com/',
                 'accept-language': 'zh-CN,zh;q=0.9,en;q=0.8',
@@ -1705,7 +1709,7 @@ function getCoupon() {
 			timeout: 10000
         }
         $.get(options, async(err, resp, data) => {
-            try {
+            try {				
                 data = JSON.parse(data.match(new RegExp(/jsonpCBK.?\((.*);*/))[1]);
                 let couponTitle = '';
                 let couponId = '';
