@@ -21,7 +21,7 @@ export JD_TRY_SENDNUM="10" #每隔多少账号发送一次通知，默认为4
 export JD_TRY_UNIFIED="false" 默认采用不同试用组
 
 定时自定义，能用多久随缘了！！！
-10 8-20/6 * * * jd_try.js
+ jd_try.js
  */
 const $ = new Env('京东试用')
 const URL = 'https://api.m.jd.com/client.action'
