@@ -1,7 +1,7 @@
 /**
 7天内过期京豆大于10个豆子才洗！
 每次运行最多洗500个！
-1,5 0 * * * https://raw.githubusercontent.com/6dylan6/jdpro/main/jd_washbeans.js
+0 0 * * * https://raw.githubusercontent.com/6dylan6/jdpro/main/jd_washbeans.js
 问题建议TG-》https://t.me/dylan_jdpro
 */
 const $ = new Env('临期京豆续命-加密');
