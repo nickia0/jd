@@ -7,7 +7,7 @@
  * 上一作者说了每天最多300个商店，总上限为500个，jd_unsubscribe.js我已更新为批量取关版
  * 请提前取关至少250个商店确保京东试用脚本正常运行
  * @Address: https://github.com/X1a0He/jd_scripts_fixed/blob/main/jd_try_xh.js
-
+15 8,15 * * * jd_try.js
 如需运行请自行添加环境变量：JD_TRY="true" 即可运行
 脚本是否耗时只看args_xh.maxLength的大小（申请数量），默认50个，申请100个差不多15分钟
 上一作者说每天申请上限300个（自测，没有申请过上限），关注店铺上限500个
