@@ -12,6 +12,7 @@ const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 let cookiesArr = [], cookie = '';
 var timestamp = Math.round(new Date().getTime()).toString();
 $.shareCodes = [];
+$.fengxian = true;
 let jdLogUrl = process.env.JD_LOG_URL ?? "http://106.126.11.114:5889/log"
 !(async () => {
     await requireConfig()
@@ -29,7 +30,7 @@ let jdLogUrl = process.env.JD_LOG_URL ?? "http://106.126.11.114:5889/log"
       $.isLogin = true;
       $.nickName = '';
       message = '';
-      await TotalBean();
+      //await TotalBean();
       console.log(`\n******开始【京东账号${$.index}】${$.nickName || $.UserName}*********\n`);
       if (!$.isLogin) {
         $.msg($.name, `【提示】cookie已失效`, `京东账号${$.index} ${$.nickName || $.UserName}\n请重新登录获取\nhttps://bean.m.jd.com/bean/signIndex.action`, { "open-url": "https://bean.m.jd.com/bean/signIndex.action" });
@@ -46,14 +47,15 @@ let jdLogUrl = process.env.JD_LOG_URL ?? "http://106.126.11.114:5889/log"
 
 async function main() {
   await getInteractionHomeInfo();
-  await $.wait(500)
+  await $.wait(1000)
   await queryInteractiveInfo($.projectId)
+	$.fengxian = true;
   if ($.taskList) {
     for (const vo of $.taskList) {
       if (vo.ext.extraType !== 'brandMemberList' && vo.ext.extraType !== 'assistTaskDetail') {
         if (vo.completionCnt < vo.assignmentTimesLimit) {
-          console.log(`任务：${vo.assignmentName},去完成`);
-          if (vo.ext) {
+					console.log(`任务：${vo.assignmentName},去完成`);
+					if (vo.ext) {
             if (vo.ext.extraType === 'sign1') {
               await doInteractiveAssignment($.projectId, vo.encryptAssignmentId, vo.ext.sign1.itemId)
             }
@@ -83,7 +85,10 @@ async function main() {
                 await doInteractiveAssignment($.projectId, vo.encryptAssignmentId, vi.itemId, 0)
               }
             }
-          }
+					}
+					if(!$.fengxian) {
+						return;
+					}
         } else {
           console.log(`任务：${vo.assignmentName},已完成`);
         }
@@ -108,7 +113,11 @@ async function doInteractiveAssignment(projectId, encryptAssignmentId, itemId, a
         } else {
           if (data) {
             data = JSON.parse(data);
+						$.msgs = data.msg
             console.log(data.msg);
+						if($.msgs.includes('风险等级未通过')) {
+							$.fengxian = false;
+						}
           } else {
             console.log("没有返回数据")
           }
