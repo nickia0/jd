@@ -7,7 +7,7 @@
 * */
 
 //活动列表
-let RUNCK =10
+let RUNCK =20
 let activityList = [
   { 'id': 'f3ccd0727e97466ba2036b7af6516a5e', 'endTime': 1662130800000 },
   { 'id': '15ebfda2669a4e7e886a37c83285f539', 'endTime': 1661961599000 },
