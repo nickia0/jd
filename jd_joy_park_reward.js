@@ -2,7 +2,7 @@
  汪汪乐园跑步-提现
  10 > 3 > 0.3
  https://github.com/feverrun/my_scripts/blob/main/jd_joy_park_reward.js
-0 0 * * 5,6 jd_joy_park_reward.js
+0 8 * * 5,6 jd_joy_park_reward.js
  */
 const $ = new Env('汪汪乐园赛跑-提现');
 const notify = $.isNode() ? require('./sendNotify') : '';
