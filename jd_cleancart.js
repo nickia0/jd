@@ -1,5 +1,5 @@
 /*
-30 7,19 * * * jd_cleancart.js
+30 8,20 * * * jd_cleancart.js
  * @Author: X1a0He
  * @Contact: https://t.me/X1a0He
  * @Github: https://github.com/X1a0He/jd_scripts_fixed
