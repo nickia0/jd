@@ -1,6 +1,6 @@
 /*
 店铺签到，各类店铺签到，有新的店铺直接添加token即可
-20 0,22 * * * jd_dpqd.js
+25 0,22 * * * jd_dpqd.js
 */
 const $ = new Env('店铺签到');
 const notify = $.isNode() ? require('./sendNotify') : '';
