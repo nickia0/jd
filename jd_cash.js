@@ -3,9 +3,8 @@
 活动入口：京东APP搜索领现金进入
 更新时间：2022-08-02
 定时自定义，一天跑两次就行了
-10 */4 * * * jd_cash.js
- */
-
+10 4-16/4 * * * jd_cash.js
+*/
 const $ = new Env('签到领现金_Dylan');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
