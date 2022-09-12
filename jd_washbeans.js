@@ -6,7 +6,7 @@
 默认不执行，如需执行请设置变量 DY_WASHBEANS='true'
 7天内过期京豆大于10个豆子才洗！
 每次最低兑100积分，最多500积分。
-0 0 * * * https://raw.githubusercontent.com/6dylan6/jdpro/main/jd_washbeans.js
+1 0 * * * https://raw.githubusercontent.com/6dylan6/jdpro/main/jd_washbeans.js
 问题建议TG -> https://t.me/dylan_jdpro
 */
 const $ = new Env('临期京豆续命');
