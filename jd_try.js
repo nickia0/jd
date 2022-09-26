@@ -147,7 +147,7 @@ let args_xh = {
      * 例如是18件，将会进行第三次获取，直到过滤完毕后为20件才会停止，不建议设置太大
      * 可设置环境变量：JD_TRY_MAXLENGTH
      * */
-    maxLength: process.env.JD_TRY_MAXLENGTH * 1 || 50,
+    maxLength: process.env.JD_TRY_MAXLENGTH * 1 || 20,
     /*
      * 过滤种草官类试用，某些试用商品是专属官专属，考虑到部分账号不是种草官账号
      * 例如A商品是种草官专属试用商品，下面设置为true，而你又不是种草官账号，那A商品将不会被添加到待提交试用组
@@ -183,7 +183,7 @@ let args_xh = {
      * 每多少个账号发送一次通知，默认为4
      * 可通过环境变量控制 JD_TRY_SENDNUM
      * */
-    sendNum: process.env.JD_TRY_SENDNUM * 1 || 4,
+    sendNum: process.env.JD_TRY_SENDNUM * 1 || 15,
 }
 //上面很重要，遇到问题请把上面注释看一遍再来问
 !(async () => {
