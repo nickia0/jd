@@ -20,7 +20,7 @@ export JD_TRY_MINSUPPLYNUM="1" #最小提供数量
 export JD_TRY_SENDNUM="10" #每隔多少账号发送一次通知，默认为4
 export JD_TRY_UNIFIED="false" 默认采用不同试用组
 export JD_TRY_NUM="5" 最多跑多少个CK，默认10
-15 8,16 * * * jd_try.js
+16 8,16 * * * jd_try.js
 定时自定义，能用多久随缘了！！！
  */
 
