@@ -3,7 +3,7 @@
 https://t.me/proenvc
 活动入口：京东APP首页-京东直播
 地址：https://h5.m.jd.com/babelDiy/Zeus/2zwQnu4WHRNfqMSdv69UPgpZMnE2/index.html/
-15 8,18 * * * jd_live.js
+5 10,20 * * * jd_live.js
  */
 const $ = new Env('京东直播');
 const notify = $.isNode() ? require('./sendNotify') : '';
