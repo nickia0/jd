@@ -3,7 +3,6 @@
 活动入口：APP-主页-排行榜
 15 8,18 * * * jd_gold_sign.js
  */
-
 const $ = new Env('京东金榜');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
